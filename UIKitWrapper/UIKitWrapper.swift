@@ -1,6 +1,11 @@
 import Foundation
 import SwiftUI
 
+/// Wrapper that allows to use UIKit views in SwiftUI
+///  Example:
+///     UIKitWrapper<UIVisualEffectView>() { item in
+///         item.effect = UIBlurEffect(style: .light)
+///     }
 struct UIKitWrapper<Type: UIView>: UIViewRepresentable {
     let configuration: ((Type) -> Void)
 
